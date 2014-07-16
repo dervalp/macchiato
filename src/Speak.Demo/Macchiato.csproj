@@ -274,6 +274,7 @@
   <ItemGroup>
     <Folder Include="Assets\images\" />
     <Folder Include="Assets\stylesheets\" />
+    <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="sitecore\shell\client\Services\Layouts\Renderings\Data\" />
   </ItemGroup>
   <ItemGroup>
@@ -281,23 +282,15 @@
     <Content Include="App_Config\Include\Serialization.config" />
     <Content Include="Assets\scripts\Templates\ChooseCategory\ChooseCategory.html" />
     <Content Include="App_Config\Include\ship.config" />
-    <Content Include="App_Data\Sitecore.Services.Client 1.0.0 rev. 140521.zip" />
     <Content Include="App_Config\Include\Sitecore.Services.Client.config" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Properties\PublishProfiles\aaa-release.pubxml" />
-    <None Include="Properties\PublishProfiles\aaa.pubxml" />
-    <None Include="Properties\PublishProfiles\build.pubxml" />
-    <None Include="Properties\PublishProfiles\c-speak-demo.pubxml" />
     <Content Include="web.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Simple\Index.cshtml" />
     <Content Include="Views\Layouts\MvcLayout.cshtml" />
-    <None Include="Properties\PublishProfiles\sc72a.pubxml" />
-    <None Include="Properties\PublishProfiles\Speak-72.pubxml" />
-    <None Include="Properties\PublishProfiles\speak-demo.pubxml" />
     <Content Include="sitecore\shell\client\Generic\Layouts\Layouts\Generic.cshtml" />
     <Content Include="sitecore\shell\client\Generic\Layouts\Renderings\Common\Col.cshtml" />
     <Content Include="sitecore\shell\client\Generic\Layouts\Renderings\Common\InputButton\InputButton.cshtml" />
@@ -309,14 +302,12 @@
     <Content Include="sitecore\shell\client\Generic\Layouts\Renderings\Common\Title.cshtml" />
     <Content Include="sitecore\shell\client\Generic\Styles\less\Generic.less" />
     <Content Include="sitecore\shell\client\Bootstrap\Layouts\Renderings\Common\FormGroup.cshtml" />
-    <None Include="Properties\PublishProfiles\Speak-demo.pubxml" />
     <Content Include="Views\Layouts\Testing\DataTest-Layout.cshtml" />
     <Content Include="sitecore\shell\client\Generic\Layouts\Renderings\ListsAndGrids\TemplateCollection\TemplateCollection.cshtml" />
     <Content Include="sitecore\shell\client\Generic\Layouts\Renderings\Common\Selects\Select.cshtml" />
     <Content Include="Views\Layouts\Testing\ItemServiceTest-Layout.cshtml" />
     <Content Include="sitecore\shell\client\Services\Layouts\Renderings\Common\ItemViews\ItemView.cshtml" />
     <Content Include="Views\Layouts\Testing\NestedEntityTest-Layout.cshtml" />
-    <None Include="Properties\PublishProfiles\speak.pubxml" />
     <Content Include="sitecore\shell\client\Speak\Layouts\Renderings\Services\QueryDataSources\StoredQueryDataSource.cshtml" />
     <Content Include="sitecore\shell\client\Speak\Layouts\Renderings\Services\EntityDataSources\EntityDataSource.cshtml" />
     <None Include="web.Debug.config">

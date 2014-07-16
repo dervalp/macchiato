@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Sitecore.Services.Core;
-using Speak.Blog.Model;
+using Macchiato.Model;
 
-namespace Speak.Blog.Data
+namespace Macchiato.Data
 {
   public class PostRepository : IRepository<Post>
   {

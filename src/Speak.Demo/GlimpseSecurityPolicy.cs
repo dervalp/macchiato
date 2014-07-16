@@ -4,7 +4,7 @@
 using Glimpse.AspNet.Extensions;
 using Glimpse.Core.Extensibility;
 
-namespace SitecoreCms
+namespace Macchiato
 {
     public class GlimpseSecurityPolicy:IRuntimePolicy
     {

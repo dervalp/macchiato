@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace SitecoreCms.Controllers
+namespace Macchiato.Controllers
 {
   public class SimpleController : Controller
   {

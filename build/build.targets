@@ -71,7 +71,7 @@
   <Target Name="SitecoreDemoContentPackage">
     <PropertyGroup>
       <PackageSourcePath>$(PackageResultsPath)\Source</PackageSourcePath>
-      <SpeakTarget>$(ProjectRoot)\src\Speak.Demo.Content\serialization</SpeakTarget>
+      <SpeakTarget>$(ProjectRoot)\src\Macchiato.Content\serialization</SpeakTarget>
     </PropertyGroup>
 
     <MakeDir Directories="$(PackageSourcePath)" Condition="!Exists('$(PackageSourcePath)')" />
@@ -109,7 +109,7 @@
   <Target Name="DeploySitecoreServicesClientPackage">
 
     <ItemGroup>
-      <UpdatePackageFiles Include="$(ProjectRoot)\src\Speak.Demo\App_Data\Sitecore.Services.Client*.zip" />
+      <UpdatePackageFiles Include="$(ProjectRoot)\src\Macchiato\App_Data\Sitecore.Services.Client*.zip" />
     </ItemGroup>
 
     <MSBuildHelper TaskAction="GetItem" InputItems1="@(UpdatePackageFiles)" Position="0">
@@ -130,7 +130,7 @@
 
   <Target Name="DeploySpeakDemoContentPackage">
     <PropertyGroup>
-      <UpdatePackageName Condition="$(UpdatePackageName) == ''">Speak.Demo.Content.$(PackageVersion).update</UpdatePackageName>
+      <UpdatePackageName Condition="$(UpdatePackageName) == ''">Macchiato.Content.$(PackageVersion).update</UpdatePackageName>
     </PropertyGroup>
 
     <MSBuild
@@ -162,7 +162,7 @@
 
   <Target Name="BuildAndDeployToProfile">
     <PropertyGroup>
-      <PublishProfile Condition="'$(PublishProfile)' == ''">speak</PublishProfile>
+      <PublishProfile Condition="'$(PublishProfile)' == ''">Macchiato</PublishProfile>
     </PropertyGroup>
 
     <MSBuild Projects="$(ProjectRoot)\$(ProjectName).sln"
@@ -172,7 +172,7 @@
 
   <Target Name="PublishDemoSite" DependsOnTargets="SitecoreDemoContentPackage">
     <PropertyGroup>
-      <PublishProfile Condition="'$(PublishProfile)' == ''">speak</PublishProfile>
+      <PublishProfile Condition="'$(PublishProfile)' == ''">Macchiato</PublishProfile>
     </PropertyGroup>
 
     <CallTarget Targets="BuildAndDeployToProfile" />
@@ -183,7 +183,7 @@
     
     <MSBuild Projects="$(BuildProject)"
              Targets="DeploySpeakDemoContentPackage"
-             Properties="UpdatePackageName=Speak.Demo.Content.$(PackageVersion).update" />
+             Properties="UpdatePackageName=Macchiato.Content.$(PackageVersion).update" />
 
     <Sleep Timeout="3000" />
 
@@ -220,7 +220,7 @@
     -->
 
     <PropertyGroup>
-      <BaseUrl>$(TestWebsiteUrl)/api/sc/speak-sample/speaktest</BaseUrl>
+      <BaseUrl>$(TestWebsiteUrl)/api/sc/Macchiato/macchiatotest</BaseUrl>
     </PropertyGroup>
 
     <!-- Metadata test -->

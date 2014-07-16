@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Sitecore.Services.Core.Model;
 
-namespace Speak.Blog.Model
+namespace Macchiato.Model
 {
   public class Post : EntityIdentity
   {

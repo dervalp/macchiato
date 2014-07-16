@@ -1,9 +1,9 @@
 ﻿using Sitecore.Services.Core;
 using Sitecore.Services.Infrastructure.Sitecore.Services;
-using Speak.Blog.Data;
-using Speak.Blog.Model;
+using Macchiato.Data;
+using Macchiato.Model;
 
-namespace Speak.Blog.Controllers
+namespace Macchiato.Controllers
 {
   [ServicesController]
   public class PostController : EntityService<Post>

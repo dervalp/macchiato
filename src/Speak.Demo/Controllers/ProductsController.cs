@@ -2,9 +2,9 @@
 using System.Linq;
 using System.Net;
 using System.Web.Http;
-using SitecoreCms.Models;
+using Macchiato.Models;
 
-namespace SitecoreCms.Controllers
+namespace Macchiato.Controllers
 {
   public class ProductsController : ApiController
   {

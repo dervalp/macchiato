@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace SitecoreCms
+namespace Macchiato
 {
     public class FilterConfig
     {

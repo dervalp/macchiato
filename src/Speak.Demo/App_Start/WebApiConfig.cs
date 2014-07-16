@@ -1,9 +1,9 @@
 ﻿using System.Web.Http;
 
 [assembly: WebActivatorEx.PostApplicationStartMethod(
-    typeof(SitecoreCms.WebApiConfig), "PostStart")]
+    typeof(Macchiato.WebApiConfig), "PostStart")]
 
-namespace SitecoreCms
+namespace Macchiato
 {
     public static class WebApiConfig
     {

@@ -190,9 +190,9 @@
     <None Include="sitecore\shell\client\Speak\Layouts\Renderings\Services\QueryDataSources\StoredQueryDataSource.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Speak.Demo\Speak.Demo.csproj">
+    <ProjectReference Include="..\..\..\src\Speak.Demo\Macchiato.csproj">
       <Project>{e7eafde1-7828-4126-b73f-052c7ee8c13b}</Project>
-      <Name>Speak.Demo</Name>
+      <Name>Macchiato</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

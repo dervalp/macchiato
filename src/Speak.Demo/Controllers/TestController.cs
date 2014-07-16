@@ -1,6 +1,6 @@
 using System.Web.Http;
 
-namespace SitecoreCms.Controllers
+namespace Macchiato.Controllers
 {
   public class TestController : ApiController
   {

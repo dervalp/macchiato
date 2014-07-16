@@ -1,4 +1,4 @@
-﻿namespace SitecoreCms.Models
+﻿namespace Macchiato.Models
 {
     public class Product
     {

@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" DefaultTargets="Go" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <PropertyGroup>
-    <ProjectName>Speak.Demo</ProjectName>
+    <ProjectName>Macchiato</ProjectName>
   </PropertyGroup>
   
   <Import Project="$(MSBuildProjectDirectory)\versions.targets" />
