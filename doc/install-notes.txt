@@ -1,0 +1,67 @@
+SPEAK Preview Installation Notes
+================================
+
+Overview
+--------
+Use thse notes to install preview versions of SPEAK.
+
+As a prerequisite for installing SPEAK you will require Sitecore v7.2 installed.
+
+
+Instructions
+------------
+1. Login to the Sitecore.Services build server, you can currently use a guest account:
+
+   http://10.144.100.10:9111/overview.html
+
+2. Open the 'Sitecore Services Integration - Deploy and Test' project and download the three Artifacts from the '05 - Smoke Test'.
+
+   This will give you a Speak.Demo.Site.zip archive and two Sitecore update packages.
+
+3. Load the /sitecore/admin/UpdateInstallationWizard.aspx page for site.
+
+4. Install the Speak.0.1.x.x.update package
+
+5. Install the Speak.Demo.Content.0.1.x.x.update package
+
+6. Extract the contents of the Speak.Demo.Site.zip into the folder containing your Sitecore v7.1 instance.
+
+7. Rename the App_Config\Include\DataFolder.config.example file to App_Config\Include\DataFolder.config
+
+   Edit the contents of the App_Config\Include\DataFolder.config file. Change the 'C:\Websites\speak\Data' 
+   value to reflect the location of your Sitecore v7.1 instance data folder.
+
+   Note: this step only needs to be performed the first time that you install the SPEAK preview version.
+
+8. Publish the site content.
+
+
+You should now be able to view the demo site content. For example:
+
+- Javascript automation of call to Post Controller on the server
+
+  /test/datatest
+
+
+- Vanilla Web Api Products controller
+
+  Demonstrates that the SPEAK implemetation does not have side effects on any existing Web Api controllers 
+  within the site.
+
+  /api/products
+  /api/products/2
+
+
+- EntityService<SimpleData> controller example
+
+  /api/sc/speak-sample/speaktest/fetchentities [GET]
+
+  /api/sc/speak-sample/speaktest/fetchentity/51f872c0-882a-4491-b275-bf96af401a5f [GET]
+  
+  /api/sc/speak-sample/speaktest [OPTIONS]
+  
+  /api/sc/speak-sample/speaktest [POST]
+      request body should contain a value in the 
+	  form {"Id":"51f872c0-882a-4491-b275-bf96af401a5f","Value":"some value"}
+
+

@@ -1,0 +1,16 @@
+@using Sitecore.Data.Items
+@using Sitecore.Mvc
+@using Sitecore.Web.UI
+@model Sitecore.Mvc.Presentation.RenderingModel
+@{
+    var control = this.InitializeControl("col");
+    var controlId = control.ControlId;
+    var colSize = control.GetInt("ColumnSize");
+    
+    if (colSize >= 1 && colSize <= 12) {
+        control.AppendClass("col-sm-" + colSize);
+    }
+}
+<div data-sc-presenter @control.HtmlAttributes>
+  @this.Html.Sitecore().Placeholder(controlId + ".Content")
+</div>

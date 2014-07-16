@@ -1,0 +1,53 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Web.UI
+@model Sitecore.Mvc.Presentation.RenderingModel
+@{
+    var control = this.InitializeControl("ItemView");
+}
+
+<table @control.HtmlAttributes data-sc-presenter="scKoPresenter">
+    <thead>
+        <tr>
+            <td>Field Name</td>
+            <td>Field Value</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                ItemID
+            </td>
+            <td data-bind="text:ItemID"></td>
+        </tr>
+        <tr>
+            <td>
+                ItemName
+            </td>
+            <td data-bind="text:ItemName"></td>
+        </tr>
+        <tr>
+            <td>
+                ItemPath
+            </td>
+            <td data-bind="text:ItemPath"></td>
+        </tr>
+        <tr>
+            <td>
+                ParentID
+            </td>
+            <td data-bind="text:ParentID"></td>
+        </tr>
+        <tr>
+            <td>
+                TemplateID
+            </td>
+            <td data-bind="text:TemplateID"></td>
+        </tr>
+        <tr>
+            <td>
+                TemplateName
+            </td>
+            <td data-bind="text:TemplateName"></td>
+        </tr>
+    </tbody>
+</table>

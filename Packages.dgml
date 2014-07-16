@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="test\smoke-test\Sitecore.Speak.Smoke.Test" Label="Sitecore.Speak.Smoke.Test" Category="Project" />
+    <Node Id="Microsoft.AspNet.Mvc 4.0.30506.0" Label="Microsoft.AspNet.Mvc 4.0.30506.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.Razor 2.0.30506.0" Label="Microsoft.AspNet.Razor 2.0.30506.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Client 4.0.30506.0" Label="Microsoft.AspNet.WebApi.Client 4.0.30506.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Core 4.0.30506.0" Label="Microsoft.AspNet.WebApi.Core 4.0.30506.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.WebHost 4.0.30506.0" Label="Microsoft.AspNet.WebApi.WebHost 4.0.30506.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebPages 2.0.30506.0" Label="Microsoft.AspNet.WebPages 2.0.30506.0" Category="Package" />
+    <Node Id="Microsoft.Net.Http 2.0.20710.0" Label="Microsoft.Net.Http 2.0.20710.0" Category="Package" />
+    <Node Id="Microsoft.Web.Infrastructure 1.0.0.0" Label="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package" />
+    <Node Id="Newtonsoft.Json 4.5.11" Label="Newtonsoft.Json 4.5.11" Category="Package" />
+    <Node Id="Selenium.WebDriver 2.38.0" Label="Selenium.WebDriver 2.38.0" Category="Package" />
+    <Node Id="Should 1.1.20" Label="Should 1.1.20" Category="Package" />
+    <Node Id="SimpleBrowser 0.5.13" Label="SimpleBrowser 0.5.13" Category="Package" />
+    <Node Id="Sitecore.Services 0.2.0.135" Label="Sitecore.Services 0.2.0.135" Category="Package" />
+    <Node Id="Sitecore.Services.Client 0.2.0.18" Label="Sitecore.Services.Client 0.2.0.18" Category="Package" />
+    <Node Id="xunit 1.9.2" Label="xunit 1.9.2" Category="Package" />
+    <Node Id="src\Speak.Blog" Label="Speak.Blog" Category="Project" />
+    <Node Id="Microsoft.AspNet.Mvc 4.0.30506.0" Label="Microsoft.AspNet.Mvc 4.0.30506.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.Razor 2.0.30506.0" Label="Microsoft.AspNet.Razor 2.0.30506.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Client 4.0.30506.0" Label="Microsoft.AspNet.WebApi.Client 4.0.30506.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Core 4.0.30506.0" Label="Microsoft.AspNet.WebApi.Core 4.0.30506.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.WebHost 4.0.30506.0" Label="Microsoft.AspNet.WebApi.WebHost 4.0.30506.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebPages 2.0.30506.0" Label="Microsoft.AspNet.WebPages 2.0.30506.0" Category="Package" />
+    <Node Id="Microsoft.Net.Http 2.0.20710.0" Label="Microsoft.Net.Http 2.0.20710.0" Category="Package" />
+    <Node Id="Microsoft.Web.Infrastructure 1.0.0.0" Label="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package" />
+    <Node Id="Newtonsoft.Json 4.5.11" Label="Newtonsoft.Json 4.5.11" Category="Package" />
+    <Node Id="Sitecore.Services 0.2.0.1" Label="Sitecore.Services 0.2.0.1" Category="Package" />
+    <Node Id="Sitecore.Services.Contrib 0.2.0.38" Label="Sitecore.Services.Contrib 0.2.0.38" Category="Package" />
+    <Node Id="src\Speak.Demo" Label="Speak.Demo" Category="Project" />
+    <Node Id="Glimpse 1.7.0" Label="Glimpse 1.7.0" Category="Package" />
+    <Node Id="Glimpse.AspNet 1.5.0" Label="Glimpse.AspNet 1.5.0" Category="Package" />
+    <Node Id="Glimpse.Mvc4 1.4.0" Label="Glimpse.Mvc4 1.4.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.Mvc 4.0.30506.0" Label="Microsoft.AspNet.Mvc 4.0.30506.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.Razor 2.0.30506.0" Label="Microsoft.AspNet.Razor 2.0.30506.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi 4.0.30506.0" Label="Microsoft.AspNet.WebApi 4.0.30506.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Client 4.0.30506.0" Label="Microsoft.AspNet.WebApi.Client 4.0.30506.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Core 4.0.30506.0" Label="Microsoft.AspNet.WebApi.Core 4.0.30506.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Tracing 4.0.30506" Label="Microsoft.AspNet.WebApi.Tracing 4.0.30506" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.WebHost 4.0.30506.0" Label="Microsoft.AspNet.WebApi.WebHost 4.0.30506.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebPages 2.0.30506.0" Label="Microsoft.AspNet.WebPages 2.0.30506.0" Category="Package" />
+    <Node Id="Microsoft.Net.Http 2.0.20710.0" Label="Microsoft.Net.Http 2.0.20710.0" Category="Package" />
+    <Node Id="Microsoft.Web.Infrastructure 1.0.0.0" Label="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package" />
+    <Node Id="Newtonsoft.Json 4.5.11" Label="Newtonsoft.Json 4.5.11" Category="Package" />
+    <Node Id="OctoPack 2.0.26" Label="OctoPack 2.0.26" Category="Package" />
+    <Node Id="Sitecore.Glimpse 0.4.0" Label="Sitecore.Glimpse 0.4.0" Category="Package" />
+    <Node Id="Sitecore.Glimpse.Mvc4 0.4.0" Label="Sitecore.Glimpse.Mvc4 0.4.0" Category="Package" />
+    <Node Id="Sitecore.Services 0.2.0.135" Label="Sitecore.Services 0.2.0.135" Category="Package" />
+    <Node Id="Sitecore.Services.Client 0.2.0.18" Label="Sitecore.Services.Client 0.2.0.18" Category="Package" />
+    <Node Id="Sitecore.Services.Contrib 0.2.0.38" Label="Sitecore.Services.Contrib 0.2.0.38" Category="Package" />
+    <Node Id="Sitecore.Ship.AspNet 0.3.5" Label="Sitecore.Ship.AspNet 0.3.5" Category="Package" />
+    <Node Id="Speak 1.2.0.99" Label="Speak 1.2.0.99" Category="Package" />
+    <Node Id="Speak.bootJS 0.1.0.31" Label="Speak.bootJS 0.1.0.31" Category="Package" />
+    <Node Id="WebActivatorEx 2.0.4" Label="WebActivatorEx 2.0.4" Category="Package" />
+    <Node Id="YUICompressor.NET 2.1.1.0" Label="YUICompressor.NET 2.1.1.0" Category="Package" />
+    <Node Id="YUICompressor.NET.MSBuild 2.1.1.0" Label="YUICompressor.NET.MSBuild 2.1.1.0" Category="Package" />
+  </Nodes>
+  <Links>
+    <Link Source="Microsoft.AspNet.Mvc 4.0.30506.0" Target="Microsoft.AspNet.WebPages 2.0.30506.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Mvc 4.0.30506.0" Target="Microsoft.AspNet.Razor 2.0.30506.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 4.0.30506.0" Target="Microsoft.Net.Http 2.0.20710.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 4.0.30506.0" Target="Newtonsoft.Json 4.5.11" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Core 4.0.30506.0" Target="Microsoft.AspNet.WebApi.Client 4.0.30506.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.WebHost 4.0.30506.0" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.WebHost 4.0.30506.0" Target="Microsoft.AspNet.WebApi.Core 4.0.30506.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 2.0.30506.0" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 2.0.30506.0" Target="Microsoft.AspNet.Razor 2.0.30506.0" Category="Package Dependency" />
+    <Link Source="Sitecore.Services 0.2.0.135" Target="Microsoft.AspNet.Mvc 4.0.30506.0" Category="Package Dependency" />
+    <Link Source="Sitecore.Services 0.2.0.135" Target="Microsoft.AspNet.WebApi.WebHost 4.0.30506.0" Category="Package Dependency" />
+    <Link Source="Sitecore.Services.Client 0.2.0.18" Target="Sitecore.Services 0.2.0.135" Category="Package Dependency" />
+    <Link Source="test\smoke-test\Sitecore.Speak.Smoke.Test" Target="Selenium.WebDriver 2.38.0" Category="Installed Package" />
+    <Link Source="test\smoke-test\Sitecore.Speak.Smoke.Test" Target="Should 1.1.20" Category="Installed Package" />
+    <Link Source="test\smoke-test\Sitecore.Speak.Smoke.Test" Target="SimpleBrowser 0.5.13" Category="Installed Package" />
+    <Link Source="test\smoke-test\Sitecore.Speak.Smoke.Test" Target="Sitecore.Services.Client 0.2.0.18" Category="Installed Package" />
+    <Link Source="test\smoke-test\Sitecore.Speak.Smoke.Test" Target="xunit 1.9.2" Category="Installed Package" />
+    <Link Source="Microsoft.AspNet.Mvc 4.0.30506.0" Target="Microsoft.AspNet.WebPages 2.0.30506.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Mvc 4.0.30506.0" Target="Microsoft.AspNet.Razor 2.0.30506.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 4.0.30506.0" Target="Microsoft.Net.Http 2.0.20710.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 4.0.30506.0" Target="Newtonsoft.Json 4.5.11" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Core 4.0.30506.0" Target="Microsoft.AspNet.WebApi.Client 4.0.30506.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.WebHost 4.0.30506.0" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.WebHost 4.0.30506.0" Target="Microsoft.AspNet.WebApi.Core 4.0.30506.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 2.0.30506.0" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 2.0.30506.0" Target="Microsoft.AspNet.Razor 2.0.30506.0" Category="Package Dependency" />
+    <Link Source="Sitecore.Services 0.2.0.1" Target="Microsoft.AspNet.Mvc 4.0.30506.0" Category="Package Dependency" />
+    <Link Source="Sitecore.Services 0.2.0.1" Target="Microsoft.AspNet.WebApi.WebHost 4.0.30506.0" Category="Package Dependency" />
+    <Link Source="Sitecore.Services.Contrib 0.2.0.38" Target="Sitecore.Services 0.2.0.1" Category="Package Dependency" />
+    <Link Source="src\Speak.Blog" Target="Sitecore.Services.Contrib 0.2.0.38" Category="Installed Package" />
+    <Link Source="Glimpse.AspNet 1.5.0" Target="Glimpse 1.7.0" Category="Package Dependency" />
+    <Link Source="Glimpse.Mvc4 1.4.0" Target="Glimpse.AspNet 1.5.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Mvc 4.0.30506.0" Target="Microsoft.AspNet.WebPages 2.0.30506.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Mvc 4.0.30506.0" Target="Microsoft.AspNet.Razor 2.0.30506.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi 4.0.30506.0" Target="Microsoft.AspNet.WebApi.WebHost 4.0.30506.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 4.0.30506.0" Target="Microsoft.Net.Http 2.0.20710.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 4.0.30506.0" Target="Newtonsoft.Json 4.5.11" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Core 4.0.30506.0" Target="Microsoft.AspNet.WebApi.Client 4.0.30506.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Tracing 4.0.30506" Target="Microsoft.AspNet.WebApi.Core 4.0.30506.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.WebHost 4.0.30506.0" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.WebHost 4.0.30506.0" Target="Microsoft.AspNet.WebApi.Core 4.0.30506.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 2.0.30506.0" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 2.0.30506.0" Target="Microsoft.AspNet.Razor 2.0.30506.0" Category="Package Dependency" />
+    <Link Source="Sitecore.Glimpse 0.4.0" Target="Glimpse 1.7.0" Category="Package Dependency" />
+    <Link Source="Sitecore.Glimpse 0.4.0" Target="Glimpse.AspNet 1.5.0" Category="Package Dependency" />
+    <Link Source="Sitecore.Glimpse.Mvc4 0.4.0" Target="Sitecore.Glimpse 0.4.0" Category="Package Dependency" />
+    <Link Source="Sitecore.Glimpse.Mvc4 0.4.0" Target="Glimpse.Mvc4 1.4.0" Category="Package Dependency" />
+    <Link Source="Sitecore.Services 0.2.0.135" Target="Microsoft.AspNet.Mvc 4.0.30506.0" Category="Package Dependency" />
+    <Link Source="Sitecore.Services 0.2.0.135" Target="Microsoft.AspNet.WebApi.WebHost 4.0.30506.0" Category="Package Dependency" />
+    <Link Source="Sitecore.Services.Client 0.2.0.18" Target="Sitecore.Services 0.2.0.135" Category="Package Dependency" />
+    <Link Source="Sitecore.Services.Contrib 0.2.0.38" Target="Sitecore.Services 0.2.0.135" Category="Package Dependency" />
+    <Link Source="Speak 1.2.0.99" Target="Speak.bootJS 0.1.0.31" Category="Package Dependency" />
+    <Link Source="Speak 1.2.0.99" Target="Microsoft.AspNet.WebApi.WebHost 4.0.30506.0" Category="Package Dependency" />
+    <Link Source="Speak 1.2.0.99" Target="Microsoft.AspNet.Mvc 4.0.30506.0" Category="Package Dependency" />
+    <Link Source="Speak 1.2.0.99" Target="Newtonsoft.Json 4.5.11" Category="Package Dependency" />
+    <Link Source="Speak 1.2.0.99" Target="YUICompressor.NET 2.1.1.0" Category="Package Dependency" />
+    <Link Source="Speak 1.2.0.99" Target="YUICompressor.NET.MSBuild 2.1.1.0" Category="Package Dependency" />
+    <Link Source="WebActivatorEx 2.0.4" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="src\Speak.Demo" Target="Microsoft.AspNet.WebApi 4.0.30506.0" Category="Installed Package" />
+    <Link Source="src\Speak.Demo" Target="Microsoft.AspNet.WebApi.Tracing 4.0.30506" Category="Installed Package" />
+    <Link Source="src\Speak.Demo" Target="OctoPack 2.0.26" Category="Installed Package" />
+    <Link Source="src\Speak.Demo" Target="Sitecore.Glimpse.Mvc4 0.4.0" Category="Installed Package" />
+    <Link Source="src\Speak.Demo" Target="Sitecore.Services.Client 0.2.0.18" Category="Installed Package" />
+    <Link Source="src\Speak.Demo" Target="Sitecore.Services.Contrib 0.2.0.38" Category="Installed Package" />
+    <Link Source="src\Speak.Demo" Target="Sitecore.Ship.AspNet 0.3.5" Category="Installed Package" />
+    <Link Source="src\Speak.Demo" Target="Speak 1.2.0.99" Category="Installed Package" />
+    <Link Source="src\Speak.Demo" Target="WebActivatorEx 2.0.4" Category="Installed Package" />
+  </Links>
+  <Categories>
+    <Category Id="Project" />
+    <Category Id="Package" />
+  </Categories>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Project" ValueLabel="True">
+      <Condition Expression="HasCategory('Project')" />
+      <Setter Property="Background" Value="Blue" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Package Dependency" ValueLabel="True">
+      <Condition Expression="HasCategory('Package Dependency')" />
+      <Setter Property="Background" Value="Yellow" />
+    </Style>
+  </Styles>
+</DirectedGraph>

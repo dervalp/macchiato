@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Speak.Demo.Content</id>
+    <version>0.0.0</version>
+    <authors>Kevin Obee</authors>
+    <owners>dervalp, kevinobee</owners>
+    <projectUrl>http://sitecore.net/</projectUrl>
+    <iconUrl>http://www.sitecore.net/favicon.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Sitecore SPEAK Demo site content</description>
+    <releaseNotes>Pre-release version</releaseNotes>
+    <tags>Sitecore Speak Demo</tags>
+    <language>en-GB</language>
+  </metadata>
+  <files>
+    <file src="..\..\src\Speak.Demo.Content\content\**\*" target="content" />
+    <file src="..\..\src\Speak.Demo.Content\serialization\**\*" target="serialization" />
+    <file src="..\..\src\Speak.Demo.Content\tools\**\*" target="tools" />
+  </files>
+</package>

@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1BDAE08E-470A-4725-8D8C-5F25ACB188AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9DFCD64B-BB6C-4721-B5AC-2FA0D3B992E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{66D8BECE-FEBF-4464-B213-47E6C25F4AE9}"
+	ProjectSection(SolutionItems) = preProject
+		build\Build.proj = build\Build.proj
+		build\build.props = build\build.props
+		build\build.targets = build\build.targets
+		build\Build.tasks = build\Build.tasks
+		build\environment.props = build\environment.props
+		build\versions.targets = build\versions.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{508F6B03-46F4-49B6-A809-775EA170F6D0}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "smoke-test", "smoke-test", "{7E3F9C76-71CC-4A49-B522-30E1D3B916A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packaging", "packaging", "{04D2FF1E-6158-4AF6-9534-B4BF508863D2}"
+	ProjectSection(SolutionItems) = preProject
+		src\Speak.Demo\Speak.Demo.nuspec = src\Speak.Demo\Speak.Demo.nuspec
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speak.Demo", "src\Speak.Demo\Speak.Demo.csproj", "{E7EAFDE1-7828-4126-B73F-052C7EE8C13B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Speak.Smoke.Test", "test\smoke-test\Sitecore.Speak.Smoke.Test\Sitecore.Speak.Smoke.Test.csproj", "{FF9DB713-936C-414C-BFB0-F3C169322B9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speak.Demo.Content", "src\Speak.Demo.Content\Speak.Demo.Content.csproj", "{69182B29-D657-4E32-8AA8-79D20ED48C4E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{6C12A069-AB6C-4BB5-ABA2-0FCC4E7CFB6E}"
+	ProjectSection(SolutionItems) = preProject
+		src\Speak.Demo\sitecore\shell\client\Services\Layouts\Renderings\Data\DataSources v1.2.zip = src\Speak.Demo\sitecore\shell\client\Services\Layouts\Renderings\Data\DataSources v1.2.zip
+		doc\install-notes.txt = doc\install-notes.txt
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{B19307A9-3C99-41FD-9D9C-36D631C63F98}"
+	ProjectSection(SolutionItems) = preProject
+		src\Common\CommonAssemblyInfo.cs = src\Common\CommonAssemblyInfo.cs
+		src\Common\CommonVersionInfo.cs = src\Common\CommonVersionInfo.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "command line", "command line", "{742099CF-B6A0-4189-8796-521D4CEFB105}"
+	ProjectSection(SolutionItems) = preProject
+		build.cmd = build.cmd
+		deploy.cmd = deploy.cmd
+		deployCode.cmd = deployCode.cmd
+		publish.cmd = publish.cmd
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7EAFDE1-7828-4126-B73F-052C7EE8C13B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7EAFDE1-7828-4126-B73F-052C7EE8C13B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7EAFDE1-7828-4126-B73F-052C7EE8C13B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7EAFDE1-7828-4126-B73F-052C7EE8C13B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF9DB713-936C-414C-BFB0-F3C169322B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF9DB713-936C-414C-BFB0-F3C169322B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF9DB713-936C-414C-BFB0-F3C169322B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF9DB713-936C-414C-BFB0-F3C169322B9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69182B29-D657-4E32-8AA8-79D20ED48C4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69182B29-D657-4E32-8AA8-79D20ED48C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69182B29-D657-4E32-8AA8-79D20ED48C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69182B29-D657-4E32-8AA8-79D20ED48C4E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E7EAFDE1-7828-4126-B73F-052C7EE8C13B} = {1BDAE08E-470A-4725-8D8C-5F25ACB188AB}
+		{69182B29-D657-4E32-8AA8-79D20ED48C4E} = {1BDAE08E-470A-4725-8D8C-5F25ACB188AB}
+		{B19307A9-3C99-41FD-9D9C-36D631C63F98} = {1BDAE08E-470A-4725-8D8C-5F25ACB188AB}
+		{7E3F9C76-71CC-4A49-B522-30E1D3B916A9} = {9DFCD64B-BB6C-4721-B5AC-2FA0D3B992E4}
+		{04D2FF1E-6158-4AF6-9534-B4BF508863D2} = {66D8BECE-FEBF-4464-B213-47E6C25F4AE9}
+		{742099CF-B6A0-4189-8796-521D4CEFB105} = {66D8BECE-FEBF-4464-B213-47E6C25F4AE9}
+		{FF9DB713-936C-414C-BFB0-F3C169322B9A} = {7E3F9C76-71CC-4A49-B522-30E1D3B916A9}
+	EndGlobalSection
+EndGlobal

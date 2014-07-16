@@ -1,0 +1,1 @@
+tools\curl\curl.exe -i -X POST %TestWebsiteUrl%/services/publish/smart --header "Content-Type: application/x-www-form-urlencoded" --header "Content-Length: 0" -H "Accept:application/json"

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Import Project="$(MSBuildProjectDirectory)\build.props" />
+  <Import Project="$(MSBuildProjectDirectory)\build.tasks" />
+
+  <UsingTask
+      AssemblyFile="$(ProjectRoot)\Tools\MSBuild\ExtensionPack\MSBuild.ExtensionPack.dll"
+      TaskName="MSBuild.ExtensionPack.Framework.MSBuildHelper"/>
+
+  <UsingTask
+    AssemblyFile="$(XunitPath)\xunit.runner.msbuild.dll"
+    TaskName="Xunit.Runner.MSBuild.xunit"/>
+
+  <UsingTask
+    AssemblyFile="$(CourierPath)\MSBuild.Sitecore.Courier.dll"
+    TaskName="MSBuild.Sitecore.Courier.Tasks.SitecoreCourier" />
+
+  <UsingTask
+    AssemblyFile="$(ProjectRoot)\Tools\MSBuild\MSBuildExtensions.dll"
+    TaskName="Sleep" />
+
+  <UsingTask
+    AssemblyFile="$(ProjectRoot)\Tools\MSBuild\ExtensionPack\MSBuild.ExtensionPack.dll"
+    TaskName="MSBuild.ExtensionPack.Web.HttpWebRequest" />
+  
+  <Target Name="CopyLibs">
+    <ItemGroup>
+      <CopyLibFiles Include="@(LibFiles -> '$(LibsSrcPath)\%(Identity)')" />
+    </ItemGroup>
+
+    <Copy
+        SourceFiles="@(CopyLibFiles)"
+        DestinationFolder="$(LibsDestPath)"
+        />
+  </Target>
+
+  <Target Name="Clean">
+    <RemoveDir Directories="$(ArtifactsPath)"  />
+  </Target>
+
+  <Target Name="Init" DependsOnTargets="Clean; CopyLibs">
+    <MakeDir Directories="$(ArtifactsPath)" Condition="!Exists('$(ArtifactsPath)')" />
+    <MakeDir Directories="$(AnalysisResultsPath)" Condition="!Exists('$(AnalysisResultsPath)')" />
+    <MakeDir Directories="$(PackageResultsPath)" Condition="!Exists('$(PackageResultsPath)')" />
+    <MakeDir Directories="$(TestResultsPath)" Condition="!Exists('$(TestResultsPath)')" />
+  </Target>
+
+  <Target Name="Build" DependsOnTargets="Init">
+    <MSBuild Projects="$(ProjectRoot)\$(ProjectName).sln"
+             Targets="Clean;ReBuild"
+             Properties="Configuration=$(Configuration)" />
+
+    <ItemGroup>
+      <Net45Libs
+        Include="$(ProjectRoot)\src\*\bin\$(Configuration)\*.dll; $(ProjectRoot)\src\*\bin\$(Configuration)\*.pdb;"/>
+    </ItemGroup>
+
+    <Copy
+      SourceFiles="@(Net45Libs)"
+      DestinationFolder="$(BuildResultsPath)\lib\net45\" />
+  </Target>
+
+  <Target Name="StdPackage" DependsOnTargets="Build">
+    <ItemGroup>
+      <NuspecFiles Include="$(PackagingPath)\*.nuspec" />
+    </ItemGroup>
+    <Exec Command="$(NuGetExePath) pack  %(NuspecFiles.Identity) -Verbosity detailed -Version $(PackageVersion) -OutputDirectory $(PackageResultsPath)"/>
+  </Target>
+
+  <Target Name="SitecoreDemoContentPackage">
+    <PropertyGroup>
+      <PackageSourcePath>$(PackageResultsPath)\Source</PackageSourcePath>
+      <SpeakTarget>$(ProjectRoot)\src\Speak.Demo.Content\serialization</SpeakTarget>
+    </PropertyGroup>
+
+    <MakeDir Directories="$(PackageSourcePath)" Condition="!Exists('$(PackageSourcePath)')" />
+
+    <Message Text="PackageVersion = $(PackageVersion)" />
+
+    <SitecoreCourier
+      ToolPath = "$(CourierPath)"
+      SourceDirectory = "$(PackageSourcePath)"
+      TargetDirectory = "$(SpeakTarget)"
+      OutputUpdateFile = "$(PackageResultsPath)\Speak.Demo.Content.$(PackageVersion).update" />
+
+  </Target>
+
+  <Target Name="DeploySitecorePackage" >
+
+    <CreateProperty Condition="Exists('$(UpdatePackageName)')" Value="true">
+      <Output TaskParameter="Value" PropertyName="UpdateFileExists"/>
+    </CreateProperty>
+
+    <Message
+      Text="Skipping deployment of $(UpdatePackageName) - file doesn't exist"
+      Condition="'$(UpdateFileExists)' != 'true'" />
+
+    <Message
+      Text="Deploy package - $(UpdatePackageName)"
+      Condition="'$(UpdateFileExists)' == 'true'" />
+
+    <Exec
+      Command="$(CurlExePath) -i --form &quot;path=@$(UpdatePackageName)&quot; $(TestWebsiteUrl)/services/package/install/fileupload -F &quot;DisableIndexing=true&quot;"
+      Condition="'$(UpdateFileExists)' == 'true'" />
+
+  </Target>
+
+  <Target Name="DeploySitecoreServicesClientPackage">
+
+    <ItemGroup>
+      <UpdatePackageFiles Include="$(ProjectRoot)\src\Speak.Demo\App_Data\Sitecore.Services.Client*.zip" />
+    </ItemGroup>
+
+    <MSBuildHelper TaskAction="GetItem" InputItems1="@(UpdatePackageFiles)" Position="0">
+      <Output TaskParameter="OutputItems" ItemName="AnItem" />
+    </MSBuildHelper>
+
+    <Message Text = "Item: %(AnItem.Identity)" />
+
+    <PropertyGroup>
+      <UpdatePackageName Condition="$(UpdatePackageName) == ''">%(AnItem.Identity)</UpdatePackageName>
+    </PropertyGroup>
+
+    <MSBuild Projects="$(BuildProject)"
+        Targets="DeploySitecorePackage"
+        Properties="UpdatePackageName=$(UpdatePackageName)" />
+
+  </Target>
+
+  <Target Name="DeploySpeakDemoContentPackage">
+    <PropertyGroup>
+      <UpdatePackageName Condition="$(UpdatePackageName) == ''">Speak.Demo.Content.$(PackageVersion).update</UpdatePackageName>
+    </PropertyGroup>
+
+    <MSBuild
+      Projects="$(BuildProject)"
+      Targets="DeploySitecorePackage"
+      Properties="UpdatePackageName=$(PackageResultsPath)\$(UpdatePackageName)" />
+
+  </Target>
+
+  <Target Name="WarmUpWebsite">
+
+    <Message Text="Warm up website - $(TestWebsiteUrl)" />
+
+    <MSBuild.ExtensionPack.Web.HttpWebRequest 
+      TaskAction="GetResponse" 
+      Url="$(TestWebsiteUrl)">
+      <Output TaskParameter="Response" ItemName="ResponseDetail"/>
+      <Output TaskParameter="Status" PropertyName="ResponseStatus"/>
+    </MSBuild.ExtensionPack.Web.HttpWebRequest>
+
+  </Target>
+
+  <Target Name="SitecorePublish">
+
+    <Message Text="Run Sitecore publish" />
+    <Exec Command="$(CurlExePath) -i -X POST $(TestWebsiteUrl)/services/publish/full --header &quot;Content-Type: application/x-www-form-urlencoded&quot; --header &quot;Content-Length: 0&quot; -H &quot;Accept:application/json&quot;" />
+
+  </Target>
+
+  <Target Name="BuildAndDeployToProfile">
+    <PropertyGroup>
+      <PublishProfile Condition="'$(PublishProfile)' == ''">speak</PublishProfile>
+    </PropertyGroup>
+
+    <MSBuild Projects="$(ProjectRoot)\$(ProjectName).sln"
+             Properties="DeployOnBuild=true;PublishProfile=$(PublishProfile)" />
+
+  </Target>
+
+  <Target Name="PublishDemoSite" DependsOnTargets="SitecoreDemoContentPackage">
+    <PropertyGroup>
+      <PublishProfile Condition="'$(PublishProfile)' == ''">speak</PublishProfile>
+    </PropertyGroup>
+
+    <CallTarget Targets="BuildAndDeployToProfile" />
+    
+    <CallTarget Targets="WarmUpWebsite" />
+
+    <CallTarget Targets="DeploySitecoreServicesClientPackage" />
+    
+    <MSBuild Projects="$(BuildProject)"
+             Targets="DeploySpeakDemoContentPackage"
+             Properties="UpdatePackageName=Speak.Demo.Content.$(PackageVersion).update" />
+
+    <Sleep Timeout="3000" />
+
+    <CallTarget Targets="SitecorePublish" />
+
+  </Target>
+
+  <Target Name="RunSmokeTests">
+
+    <ItemGroup>
+      <TestAssemblies Include="$(ProjectRoot)\test\smoke-test\**\bin\$(Configuration)\*.Test.dll" />
+    </ItemGroup>
+
+    <!--
+    
+    *** Run cUrl tests ***
+    
+    -->
+
+    <!-- 
+    
+    * Site availability
+    
+    -->
+
+    <Message Text="Can load site home page" />
+    <Exec Command="$(CurlExePath) $(TestWebsiteUrl)" />
+
+
+    <!--
+    
+    * Entity Service behaviour
+    
+    -->
+
+    <PropertyGroup>
+      <BaseUrl>$(TestWebsiteUrl)/api/sc/speak-sample/speaktest</BaseUrl>
+    </PropertyGroup>
+
+    <!-- Metadata test -->
+    <Message Text="Should return metadata" />
+    <Exec Command="$(CurlExePath) -X OPTIONS -i $(BaseUrl)" />
+
+    <!--
+    
+    * xUnit tests
+    
+    -->
+
+    <xunit
+        Assemblies="@(TestAssemblies)"
+        WorkingFolder="$(XunitPath)"
+        Xml="$(OutputXmlFile)"
+        Html="$(OutputHtmlFile)"/>
+
+
+  </Target>
+
+  <Target Name="Go" DependsOnTargets="Build">
+  </Target>
+
+</Project>
