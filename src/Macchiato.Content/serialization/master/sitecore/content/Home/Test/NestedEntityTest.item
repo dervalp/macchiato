@@ -1,0 +1,67 @@
+----item----
+version: 1
+id: {A3ACA35A-4F54-4925-9A43-B80B4E897830}
+database: master
+path: /sitecore/content/Home/Test/NestedEntityTest
+parent: {B974FD33-C72E-4BAE-A2DA-B94FE44F3D6B}
+name: NestedEntityTest
+master: {00000000-0000-0000-0000-000000000000}
+template: {BE9B7DC0-E727-4129-96D6-6C09EC9AD696}
+templatekey: Test Template
+
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 105
+
+<r>
+  <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{F0D2B610-DEEF-4536-A35F-159303F12CC6}" />
+</r>
+----version----
+language: en
+version: 1
+revision: 7c4b23b2-cb10-4070-9f76-34b62578c788
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20131231T130949
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+7c4b23b2-cb10-4070-9f76-34b62578c788
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20140407T101527:635324625277298693
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

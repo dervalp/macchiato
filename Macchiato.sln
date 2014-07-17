@@ -31,12 +31,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packaging", "packaging", "{
 		src\Speak.Demo\Speak.Demo.nuspec = src\Speak.Demo\Speak.Demo.nuspec
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Macchiato", "src\Speak.Demo\Macchiato.csproj", "{E7EAFDE1-7828-4126-B73F-052C7EE8C13B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Macchiato.Smoke.Test", "test\smoke-test\Sitecore.Speak.Smoke.Test\Macchiato.Smoke.Test.csproj", "{FF9DB713-936C-414C-BFB0-F3C169322B9A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Macchiato.Content", "src\Speak.Demo.Content\Macchiato.Content.csproj", "{69182B29-D657-4E32-8AA8-79D20ED48C4E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{6C12A069-AB6C-4BB5-ABA2-0FCC4E7CFB6E}"
 	ProjectSection(SolutionItems) = preProject
 		doc\install-notes.txt = doc\install-notes.txt
@@ -57,6 +51,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "command line", "command lin
 		publish.cmd = publish.cmd
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Macchiato", "src\Macchiato\Macchiato.csproj", "{E7EAFDE1-7828-4126-B73F-052C7EE8C13B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Macchiato.Content", "src\Macchiato.Content\Macchiato.Content.csproj", "{69182B29-D657-4E32-8AA8-79D20ED48C4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Macchiato.Smoke.Test", "test\smoke-test\Maccahito.Smoke.Test\Macchiato.Smoke.Test.csproj", "{FF9DB713-936C-414C-BFB0-F3C169322B9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,14 +67,14 @@ Global
 		{E7EAFDE1-7828-4126-B73F-052C7EE8C13B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7EAFDE1-7828-4126-B73F-052C7EE8C13B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7EAFDE1-7828-4126-B73F-052C7EE8C13B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FF9DB713-936C-414C-BFB0-F3C169322B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF9DB713-936C-414C-BFB0-F3C169322B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF9DB713-936C-414C-BFB0-F3C169322B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FF9DB713-936C-414C-BFB0-F3C169322B9A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{69182B29-D657-4E32-8AA8-79D20ED48C4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{69182B29-D657-4E32-8AA8-79D20ED48C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69182B29-D657-4E32-8AA8-79D20ED48C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69182B29-D657-4E32-8AA8-79D20ED48C4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF9DB713-936C-414C-BFB0-F3C169322B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF9DB713-936C-414C-BFB0-F3C169322B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF9DB713-936C-414C-BFB0-F3C169322B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF9DB713-936C-414C-BFB0-F3C169322B9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,10 +82,10 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{7E3F9C76-71CC-4A49-B522-30E1D3B916A9} = {9DFCD64B-BB6C-4721-B5AC-2FA0D3B992E4}
 		{04D2FF1E-6158-4AF6-9534-B4BF508863D2} = {66D8BECE-FEBF-4464-B213-47E6C25F4AE9}
-		{E7EAFDE1-7828-4126-B73F-052C7EE8C13B} = {1BDAE08E-470A-4725-8D8C-5F25ACB188AB}
-		{FF9DB713-936C-414C-BFB0-F3C169322B9A} = {7E3F9C76-71CC-4A49-B522-30E1D3B916A9}
-		{69182B29-D657-4E32-8AA8-79D20ED48C4E} = {1BDAE08E-470A-4725-8D8C-5F25ACB188AB}
 		{B19307A9-3C99-41FD-9D9C-36D631C63F98} = {1BDAE08E-470A-4725-8D8C-5F25ACB188AB}
 		{742099CF-B6A0-4189-8796-521D4CEFB105} = {66D8BECE-FEBF-4464-B213-47E6C25F4AE9}
+		{E7EAFDE1-7828-4126-B73F-052C7EE8C13B} = {1BDAE08E-470A-4725-8D8C-5F25ACB188AB}
+		{69182B29-D657-4E32-8AA8-79D20ED48C4E} = {1BDAE08E-470A-4725-8D8C-5F25ACB188AB}
+		{FF9DB713-936C-414C-BFB0-F3C169322B9A} = {7E3F9C76-71CC-4A49-B522-30E1D3B916A9}
 	EndGlobalSection
 EndGlobal

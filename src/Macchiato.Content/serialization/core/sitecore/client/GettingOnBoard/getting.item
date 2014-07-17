@@ -1,0 +1,59 @@
+----item----
+version: 1
+id: {7211B403-D229-404B-A121-AF83B9897248}
+database: core
+path: /sitecore/client/GettingOnBoard/getting
+parent: {D4A27B2F-FC0F-44B0-BBAF-3A65C61F5B12}
+name: getting
+master: {00000000-0000-0000-0000-000000000000}
+template: {5F2C442F-2554-4C80-B1D9-2195FA6168B1}
+templatekey: Speak-BasePage
+
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 848
+
+<r>
+  <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{87632445-88AF-404D-AB10-632B4F8558AB}">
+    <r id="{37E6F99C-6446-4BEC-AF47-35061DCDDD32}" ph="Page.Header" uid="{D2149541-3CAE-4779-B855-EA068AC7ABFC}" />
+    <r id="{F2431C49-6D0F-4EC4-B8E9-92C16898AF4B}" par="Id=PageHeader1&amp;Description=How+to+download%2c+install%2c+contribute+to+SPEAK&amp;Title=Getting+Started" ph="Page.Content" uid="{DEE70CDF-AFBC-42C7-881E-F1052BAB8067}" />
+    <r id="{5835752E-6C37-4484-9E99-371B3B50D05B}" par="Id=MainContent1" ph="Page.Content" uid="{CC6A4B5D-8104-46BC-9F97-52889FD40C1D}" />
+    <r id="{36EA3552-6173-4128-8EA5-DCB5F5A8B246}" ph="MainContent1.Menu" uid="{27D80593-436A-4BAF-8D2E-1AD3EDD64F9F}" />
+    <r id="{0A271292-E8C8-4CA9-928C-94219174428E}" ph="MainContent1.Content" uid="{DA7E2B3E-F2AB-409C-81A2-D68B291C0A42}" />
+  </d>
+</r>
+----version----
+language: en
+version: 1
+revision: 6db73fc1-f536-49b9-82d6-d751c22f1eb4
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20131230T121409
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+6db73fc1-f536-49b9-82d6-d751c22f1eb4
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20131230T124715:635240044351796252
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

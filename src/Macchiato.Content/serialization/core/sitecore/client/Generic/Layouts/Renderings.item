@@ -1,0 +1,44 @@
+----item----
+version: 1
+id: {66C26A0A-5825-4283-87DE-098108B7B852}
+database: core
+path: /sitecore/client/Generic/Layouts/Renderings
+parent: {CBF03BAC-119A-4DA2-987C-70DBED921FB4}
+name: Renderings
+master: {00000000-0000-0000-0000-000000000000}
+template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
+templatekey: Folder
+
+----version----
+language: en
+version: 1
+revision: 967c7ba5-140a-437a-9f84-a3b1970ae253
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20131211T110415
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+967c7ba5-140a-437a-9f84-a3b1970ae253
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20131211T110426:635223566666465531
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {A4D9E603-74B4-4252-A859-9CCE9C03D928}
+database: master
+path: /sitecore/client/Services/Item Service/Searches/Items in core
+parent: {FBD77F1E-2511-46A7-907D-2DEDB30726F6}
+name: Items in core
+master: {00000000-0000-0000-0000-000000000000}
+template: {339E3A47-95B5-4767-8924-4C04610AE162}
+templatekey: Search Definition
+
+----version----
+language: en
+version: 1
+revision: b83bcd9a-8a88-4cb9-8bf5-dc62b4b22f96
+
+----field----
+field: {7C122664-30D9-4394-B1AB-AB7DF374814C}
+name: Database
+key: database
+content-length: 4
+
+core
+----field----
+field: {CC16160D-E557-4A96-B7A0-76705860A6DF}
+name: Facet
+key: facet
+content-length: 13
+
+aTemplateName
+----field----
+field: {9FF5A1CD-5E9E-4AFB-B30D-FEAD645A3D8D}
+name: Fields
+key: fields
+content-length: 28
+
+ItemID,ItemName,TemplateName
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20140228T171016
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+b83bcd9a-8a88-4cb9-8bf5-dc62b4b22f96
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20140228T171151:635292043116600629
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

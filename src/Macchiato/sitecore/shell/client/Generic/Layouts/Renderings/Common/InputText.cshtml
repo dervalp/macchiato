@@ -1,0 +1,10 @@
+@using Sitecore.Data.Items
+@using Sitecore.Mvc
+@using Sitecore.Web.UI
+@model Sitecore.Mvc.Presentation.RenderingModel
+@{
+    var control = this.InitializeControl("inputText");
+    var isVisible = control.GetBool("IsVisible");
+    control.AppendClass(control.GetString("CssClass"));
+}
+<input @control.HtmlAttributes type="text" placeholder="@control.GetString("Watermark")" data-sc-properties='{"IsVisible": "@isVisible", "Value": "@Html.Raw(control.GetString("Value"))"}' data-bind="value: Value,isVisible:IsVisible" data-sc-presenter="scKoPresenter">
