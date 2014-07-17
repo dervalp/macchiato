@@ -1,8 +1,0 @@
-@using Sitecore.Mvc
-@using Sitecore.Web.UI
-@model Sitecore.Mvc.Presentation.RenderingModel
-@{
-    var control = this.InitializeControl("title");
-    var text = control.GetString("Text");
-}
-<h1 @control.HtmlAttributes data-sc-presenter>@text</h1>
