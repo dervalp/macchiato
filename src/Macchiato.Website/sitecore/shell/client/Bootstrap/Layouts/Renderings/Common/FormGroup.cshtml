@@ -1,0 +1,11 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Web.UI
+@model Sitecore.Mvc.Presentation.RenderingModel
+@{
+    var control = this.InitializeControl();
+    control.AppendClass("input-group");
+    var htmlAttributes = control.HtmlAttributes;
+}
+<div @htmlAttributes data-sc-presenter>
+    @Html.Sitecore().Placeholder(control.ControlId + ".Content")
+</div>
