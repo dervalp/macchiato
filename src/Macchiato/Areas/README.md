@@ -1,1 +1,0 @@
-﻿Create your MVC areas under this folder
