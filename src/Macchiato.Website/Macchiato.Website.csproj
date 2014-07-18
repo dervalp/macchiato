@@ -93,19 +93,6 @@
       <HintPath>..\..\lib\Sitecore.Mvc.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.Services.Client">
-      <HintPath>..\..\..\..\lib\8\8.0\140623\Sitecore.Services.Client.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Services.Core">
-      <HintPath>..\..\..\presentation\lib\Sitecore.Services.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Services.Infrastructure, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\8\8.0\140623\Sitecore.Services.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Services.Infrastructure.Sitecore">
-      <HintPath>..\..\..\..\lib\8\8.0\140623\Sitecore.Services.Infrastructure.Sitecore.dll</HintPath>
-    </Reference>
     <Reference Include="Sitecore.Ship.AspNet, Version=0.3.5.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Sitecore.Ship.AspNet.0.3.5\lib\net40\Sitecore.Ship.AspNet.dll</HintPath>
@@ -209,21 +196,10 @@
     </Compile>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\PostController.cs" />
-    <Compile Include="Controllers\ProductsController.cs" />
-    <Compile Include="Controllers\SimpleController.cs" />
-    <Compile Include="Controllers\SimpleNamedServicesController.cs" />
-    <Compile Include="Controllers\SpeakTestController.cs" />
-    <Compile Include="Controllers\TestController.cs" />
-    <Compile Include="Data\FakeEntityRepository.cs" />
-    <Compile Include="Data\PostRepository.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Post.cs" />
-    <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\SimpleData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -241,19 +217,6 @@
     <Content Include="Assets\scripts\Test\DataTest\Test\deps\mocha.css" />
     <Content Include="Assets\scripts\Test\DataTest\Test\deps\mocha.js" />
     <Content Include="Assets\scripts\Test\DataTest\Test\deps\sinon-1.7.3.js" />
-    <Content Include="sitecore\shell\client\Generic\Layouts\Renderings\Common\InputButton\InputButton.js" />
-    <Content Include="sitecore\shell\client\Generic\Layouts\Renderings\Common\Selects\Select.js" />
-    <Content Include="sitecore\shell\client\Generic\Layouts\Renderings\ListsAndGrids\TemplateCollection\TemplateCollection.js" />
-    <Content Include="sitecore\shell\client\Generic\Styles\Generic.css" />
-    <Content Include="sitecore\shell\client\Services\Assets\lib\entityservice.js" />
-    <Content Include="sitecore\shell\client\Services\Assets\lib\entityservice.min.js" />
-    <Content Include="sitecore\shell\client\Services\Assets\lib\extensions\validators\emailAddress.js" />
-    <Content Include="sitecore\shell\client\Services\Assets\lib\itemservice.js" />
-    <Content Include="sitecore\shell\client\Services\Assets\lib\itemservice.min.js" />
-    <Content Include="sitecore\shell\client\Services\Layouts\Renderings\Common\ItemViews\ItemView.js" />
-    <Content Include="sitecore\shell\client\Services\Assets\lib\extensions\validators\readme.txt" />
-    <Content Include="sitecore\shell\client\Speak\Layouts\Renderings\Services\EntityDataSources\EntityDataSource.js" />
-    <Content Include="sitecore\shell\client\Speak\Layouts\Renderings\Services\QueryDataSources\StoredQueryDataSource.js" />
     <Content Include="Views\Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -265,7 +228,7 @@
     <Folder Include="Assets\images\" />
     <Folder Include="Assets\stylesheets\" />
     <Folder Include="Properties\PublishProfiles\" />
-    <Folder Include="sitecore\shell\client\Services\Layouts\Renderings\Data\" />
+    <Folder Include="sitecore\shell\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\DataFolder.config.example" />
@@ -281,25 +244,9 @@
     </Content>
     <Content Include="Views\Simple\Index.cshtml" />
     <Content Include="Views\Layouts\MvcLayout.cshtml" />
-    <Content Include="sitecore\shell\client\Generic\Layouts\Layouts\Generic.cshtml" />
-    <Content Include="sitecore\shell\client\Generic\Layouts\Renderings\Common\Col.cshtml" />
-    <Content Include="sitecore\shell\client\Generic\Layouts\Renderings\Common\InputButton\InputButton.cshtml" />
-    <Content Include="sitecore\shell\client\Generic\Layouts\Renderings\Common\InputCheckbox.cshtml" />
-    <Content Include="sitecore\shell\client\Generic\Layouts\Renderings\Common\InputText.cshtml" />
-    <Content Include="sitecore\shell\client\Generic\Layouts\Renderings\Common\InputTextarea.cshtml" />
-    <Content Include="sitecore\shell\client\Generic\Layouts\Renderings\Common\Pane.cshtml" />
-    <Content Include="sitecore\shell\client\Generic\Layouts\Renderings\Common\Row.cshtml" />
-    <Content Include="sitecore\shell\client\Generic\Layouts\Renderings\Common\Title.cshtml" />
-    <Content Include="sitecore\shell\client\Generic\Styles\less\Generic.less" />
-    <Content Include="sitecore\shell\client\Bootstrap\Layouts\Renderings\Common\FormGroup.cshtml" />
     <Content Include="Views\Layouts\Testing\DataTest-Layout.cshtml" />
-    <Content Include="sitecore\shell\client\Generic\Layouts\Renderings\ListsAndGrids\TemplateCollection\TemplateCollection.cshtml" />
-    <Content Include="sitecore\shell\client\Generic\Layouts\Renderings\Common\Selects\Select.cshtml" />
     <Content Include="Views\Layouts\Testing\ItemServiceTest-Layout.cshtml" />
-    <Content Include="sitecore\shell\client\Services\Layouts\Renderings\Common\ItemViews\ItemView.cshtml" />
     <Content Include="Views\Layouts\Testing\NestedEntityTest-Layout.cshtml" />
-    <Content Include="sitecore\shell\client\Speak\Layouts\Renderings\Services\QueryDataSources\StoredQueryDataSource.cshtml" />
-    <Content Include="sitecore\shell\client\Speak\Layouts\Renderings\Services\EntityDataSources\EntityDataSource.cshtml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
