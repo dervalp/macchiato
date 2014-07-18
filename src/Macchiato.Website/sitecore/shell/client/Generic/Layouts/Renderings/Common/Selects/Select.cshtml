@@ -1,9 +1,0 @@
-﻿@using Sitecore.Mvc
-@using Sitecore.Web.UI
-@model Sitecore.Mvc.Presentation.RenderingModel
-@{
-    var control = this.InitializeControl("Select");
-    control.AppendClass(control.GetString("CssClass"));
-}
-
-<select @control.HtmlAttributes data-bind="options: Options, optionsText: 'text', value: selectedItem, optionsCaption: 'Choose your status...'" data-sc-properties='{ "Options": [], "selectedItem": "" }' data-sc-presenter="scKoPresenter"></select>
